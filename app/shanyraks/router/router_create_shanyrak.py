@@ -12,6 +12,7 @@ from ..service import Service, get_service
 
 from . import router
 
+
 class CreateShanyrakRequest(AppModel):
     type: str
     price: int
