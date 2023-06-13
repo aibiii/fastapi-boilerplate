@@ -14,3 +14,4 @@ class ShanyrakRepository:
     
     def get_shanyrak(self, shanyrak_id: str):
         return self.database["shanyraks"].find_one({"_id": ObjectId(shanyrak_id)})
+    

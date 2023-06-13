@@ -1,6 +1,6 @@
 from typing import Any
 
-from fastapi import Depends, HTTPExcpetion, status
+from fastapi import Depends
 from pydantic import Field
 
 from app.utils import AppModel
@@ -33,5 +33,4 @@ def register_shanyrak(
     svc: Service = Depends(get_service),
 ) -> dict[str, str]:
     shanyrak_id = svc.repository.create_shanyrak(jwt_data.user_id, input.dict())
-
     return CreateShanyrakResponse(id=shanyrak_id)
