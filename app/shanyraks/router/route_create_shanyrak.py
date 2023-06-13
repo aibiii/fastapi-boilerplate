@@ -1,6 +1,6 @@
 from typing import Any
 
-from fastapi import Depends
+from fastapi import Depends, HTTPExcpetion, status
 from pydantic import Field
 
 from app.utils import AppModel
