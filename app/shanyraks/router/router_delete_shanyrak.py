@@ -1,5 +1,3 @@
-from typing import Any
-
 from fastapi import Depends, Response
 
 from ..adapters.jwt_service import JWTData
