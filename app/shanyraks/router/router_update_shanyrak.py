@@ -4,8 +4,9 @@ from app.utils import AppModel
 
 from ..adapters.jwt_service import JWTData
 from ..service import Service, get_service
-from . import router
 from .dependencies import parse_jwt_user_data
+
+from . import router
 
 
 class UpdateShanyrakRequest(AppModel):
