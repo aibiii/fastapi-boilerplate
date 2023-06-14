@@ -18,9 +18,10 @@ class ShanyrakRepository:
         return self.database["shanyraks"].find_one({"_id": ObjectId(shanyrak_id)})
     
     def update_shanyrak(self, shanyrak_id: str, user_id: str, data: dict[str, Any]) -> UpdateResult:
-        self.database["shanyraks"].update_one(
+        return self.database["shanyraks"].update_one(
             filter={"_id": ObjectId(shanyrak_id), "user_id": ObjectId(user_id)},
             update={
                 "$set": data,
             },
         )
+        
