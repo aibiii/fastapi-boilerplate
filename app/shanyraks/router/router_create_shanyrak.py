@@ -27,7 +27,7 @@ class CreateShanyrakResponse(AppModel):
 
 
 @router.post("/", response_model=CreateShanyrakRequest)
-def register_shanyrak(
+def create_shanyrak(
     input: CreateShanyrakRequest,
     jwt_data: JWTData = Depends(parse_jwt_user_data),
     svc: Service = Depends(get_service),
